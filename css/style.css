@@ -1,14 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 50px;
-    color: greenyellow;
-    font-style: oblique;;
+    font-size: 1.875rem;
+    color: black;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    font-weight: 100;
 }
 h2{
-    color: white;
+    color: red;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-decoration: underline;
+    letter-spacing: 3px;
 }
 body{
+    background-color: white;
+}
+
+.tiendaCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+}
+.tienda{
+    display: flex;
+    flex-direction: row;
+}
+.albumCover img{
+    width: 200px;
+    height: 200px;
+}
+.botonCarrito{
+    padding: 5px 45px 5px 45px;
     background-color: black;
+    color: white;
+}
+
+.navbar img{
+    width: 60px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: end;
+    padding-right: 200px;
+    padding-top: 50px;
+}
+.titular{
+    padding-left: 50px;
+}
+.precio{
+    font-family: 'Courier New', Courier, monospace;
 }

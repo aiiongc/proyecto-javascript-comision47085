@@ -115,4 +115,4 @@ function eleccionPago(){
         default:
             alert('Error. Seleccione una opción posible.');
     }
-}
+} 

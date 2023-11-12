@@ -1,0 +1,26 @@
+[
+    {   
+        "id": 1,
+        "nombre": "The Fame",
+        "precio": 20,
+        "img": "https://upload.wikimedia.org/wikipedia/en/d/dd/Lady_Gaga_%E2%80%93_The_Fame_album_cover.png"
+    },
+    {   
+        "id": 2,
+        "nombre": "Born This Way",
+        "precio": 20,
+        "img": "https://upload.wikimedia.org/wikipedia/en/c/c3/Born_This_Way_album_cover.png"
+    },
+    {   
+        "id": 3,
+        "nombre": "Artpop",
+        "precio": 15,
+        "img": "https://upload.wikimedia.org/wikipedia/en/3/39/Artpop_cover.png"
+    },
+    {   
+        "id": 4,
+        "nombre": "Chromatica",
+        "precio": 25,
+        "img": "https://upload.wikimedia.org/wikipedia/en/d/d6/Lady_Gaga_-_Chromatica_%28Official_Album_Cover%29.png"
+    }
+]

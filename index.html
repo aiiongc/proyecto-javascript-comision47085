@@ -4,58 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <img src="https://i.ibb.co/wLrKQ5P/shopping-cart.png" alt="">
-        </div>
+        <nav class="navbar">
+            <img id="activarCarrito" src="./assets/img/carrito.png">
+            <div id="contadorCarrito" class="contador-carrito"></div>
+        </nav>
     </header>
     <main>
-        <section class="titular">
-            <h1>Tienda de discos</h1>
-        </section>
-        <section class="tienda">
-        <section class="tiendaCard">
-            <div class="albumCover">
-                <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/Lady_Gaga_%E2%80%93_The_Fame_album_cover.png" alt="">
-            </div>
-            <h2>Lady Gaga / The Fame</h2>
-            <p class="precio">20 USD</p>
-            <button class="botonCarrito">Añadir al carrito</button>
-        </section>
-        
-        <section class="tiendaCard">
-            <div class="albumCover">
-                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Born_This_Way_album_cover.png" alt="">
-            </div>
-            <h2>Lady Gaga / Born This Way</h2>
-            <p class="precio">30 USD</p>
-            <button class="botonCarrito">Añadir al carrito</button>
-        </section>
-
-        <section class="tiendaCard">
-            <div class="albumCover">
-                <img src="https://upload.wikimedia.org/wikipedia/en/3/39/Artpop_cover.png" alt="">
-            </div>
-            <h2>Lady Gaga / Artpop</h2>
-            <p class="precio">20 USD</p>
-            <button class="botonCarrito">Añadir al carrito</button>
-            </section>
-            
-        <section class="tiendaCard">
-            <div class="albumCover">
-                <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Lady_Gaga_-_Chromatica_%28Official_Album_Cover%29.png" alt="">
-            </div>
-            <h2>Lady Gaga / Chromatica</h2>
-            <p class="precio">45 USD</p>
-            <button class="botonCarrito">Añadir al carrito</button>
-        </section>
-    </section>
+        <div id="contenidoTienda" class="contenido-tienda"></div>
+        <div id="carritoContenedor" class="carrito-contenedor"></div>
     </main>
     <footer></footer>
-<script src="./js/script.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="./js/carrito.js"></script>
+<script src="./js/app.js"></script>
 </body>
 </html>

@@ -3,39 +3,33 @@ const activarCarrito = document.getElementById("activarCarrito");
 const carritoContenedor = document.getElementById("carritoContenedor");
 const contadorCarrito = document.getElementById("contadorCarrito");
 const toastBtn = document.querySelector("#toastify")
-// toastBtn.addEventListener("click", () => {
-//     Toastify({
 
-//         text: "This is a toast",
-        
-//         duration: 3000
-        
-//         }).showToast();
-                
-// })
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+// Traer productos desde JSON
 const obtenerDiscos = async () => {
     const respuesta = await fetch ("product.json");
     const product = await respuesta.json();
 
+// Generador de productos en tienda
     product.forEach((album)=> {
         let contenido = document.createElement("div");
         contenido.className = "tiendaCard"
         contenido.innerHTML = `
         <img src="${album.img}">
         <h3>${album.nombre}</h3>
-        <p class="precio">${album.precio} $</p>
+        <p class="precio">$${album.precio}</p>
         `;
-    
+
         contenidoTienda.append(contenido);
-    
+
+// Boton para añadir productos al carrito
         let botonCompra = document.createElement("button");
         botonCompra.className = "botonCarrito"
         botonCompra.innerText = "Agregar al carrito";
-    
+
         contenido.append(botonCompra);
-        
+
         botonCompra.addEventListener("click", () => {
             carrito.push({
                 id : album.id,
@@ -43,17 +37,16 @@ const obtenerDiscos = async () => {
                 nombre : album.nombre,
                 precio : album.precio,
             });
-            Toastify({
 
+            Toastify({
                 text: "Producto agregado al carro con éxito",
                 className: "toastify",
                 duration: 2000,
                 gravity: "top",
                 position: "left",
                 style: {
-                    background: "red",
-                  },
-                
+                    background: "orange",
+                    },
                 }).showToast();
             carritoContador();
             almacenamientoLocal();
@@ -62,7 +55,6 @@ const obtenerDiscos = async () => {
 };
 
 obtenerDiscos();
-
 
 const almacenamientoLocal = () => {
 localStorage.setItem("carrito", JSON.stringify(carrito));

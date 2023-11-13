@@ -1,3 +1,4 @@
+// Funcion para mostrar el carrito
 const funcionCarrito = () => {
     carritoContenedor.innerHTML = "";
     carritoContenedor.style.display = "flex";
@@ -19,6 +20,8 @@ const funcionCarrito = () => {
 
     carritoHeader.append(cerrarCarrito);
 
+// Generador de productos en carrito
+    if (carrito.length > 0){
     carrito.forEach((album) => {
         let carritoContenido = document.createElement("div");
         carritoContenido.className = "carrito-contenido";
@@ -26,29 +29,61 @@ const funcionCarrito = () => {
             <img class="album-cover" src="${album.img}">
             <p class="nombre-album">${album.nombre}<p>
             <p class= "precio-album">$ ${album.precio}</p>
+            <img class= "eliminar-producto" src="./assets/img/eliminar.png"> 
         `;
         carritoContenedor.append(carritoContenido);
         
-        let eliminar = document.createElement("div");
-        eliminar.innerHTML = `<img src="./assets/img/eliminar.png">`
-        eliminar.className = "eliminar-producto";
-        carritoContenido.append(eliminar);
+// Eliminar producto del carrito
+        let eliminar = carritoContenido.querySelector(".eliminar-producto");
+        eliminar.addEventListener("click", ()=> {
+            eliminarDisco(album.id);
+            Toastify({
+                text: "X Producto eliminado",
+                className: "toastify",
+                duration: 2000,
+                gravity: "top",
+                position: "left",
+                style: {
+                    background: "red",
+                    },
+                
+                }).showToast();
+            })
+        });
+    
+// Botón para vaciar el carrito
+    let vaciarCarrito = document.createElement("button");
+    vaciarCarrito.className = "vaciar-btn";
+    vaciarCarrito.innerText = "Vaciar carrito";
+    carritoContenedor.append(vaciarCarrito);
 
-        eliminar.addEventListener("click", eliminarDisco)
+    vaciarCarrito.addEventListener("click", ()=>{
+        carrito = [];
+        funcionCarrito();
+        localStorage.clear();
+        carritoContador();
     });
 
+// Calcular total a pagar
     const total = carrito.reduce((acc, el) => acc + el.precio, 0);
-    
     const totalCompra = document.createElement("div")
     totalCompra.className = "total-contenido"
     totalCompra.innerHTML = `Total a pagar: $ ${total}`;
     carritoContenedor.append(totalCompra);
+
+// Condicional para mensaje de carrito vacío
+    } else {
+    const carritoTexto = document.createElement ("p");
+    carritoTexto.className = "carrito-texto";
+    carritoTexto.innerText = "Tu carrito está vacío"
+    carritoContenedor.append(carritoTexto);
+}
 };
 
 activarCarrito.addEventListener("click", funcionCarrito);
 
-const eliminarDisco = () => {
-    const foundId = carrito.find((element) => element.id);
+const eliminarDisco = (id) => {
+    const foundId = carrito.find((element) => element.id === id);
     
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
@@ -56,9 +91,9 @@ const eliminarDisco = () => {
     carritoContador();
     almacenamientoLocal()
     funcionCarrito();
-
 };
 
+// Contador de productos en icono de carrito
 const carritoContador = () => {
     contadorCarrito.style.display = "block";
 
@@ -66,3 +101,4 @@ const carritoContador = () => {
     localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
     contadorCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"))
 };
+

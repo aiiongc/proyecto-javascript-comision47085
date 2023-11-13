@@ -2,25 +2,85 @@
     {   
         "id": 1,
         "nombre": "The Fame",
-        "precio": 20,
+        "artista": "Lady Gaga",
+        "precio": 9990,
         "img": "https://upload.wikimedia.org/wikipedia/en/d/dd/Lady_Gaga_%E2%80%93_The_Fame_album_cover.png"
     },
     {   
         "id": 2,
-        "nombre": "Born This Way",
-        "precio": 20,
-        "img": "https://upload.wikimedia.org/wikipedia/en/c/c3/Born_This_Way_album_cover.png"
+        "nombre": "The Fame Monster",
+        "artista": "Lady Gaga",
+        "precio": 18900,
+        "img": "https://upload.wikimedia.org/wikipedia/en/4/45/The_Fame_Monster.png"
     },
     {   
         "id": 3,
-        "nombre": "Artpop",
-        "precio": 15,
-        "img": "https://upload.wikimedia.org/wikipedia/en/3/39/Artpop_cover.png"
+        "nombre": "Born This Way",
+        "artista": "Lady Gaga",
+        "precio": 14990,
+        "img": "https://upload.wikimedia.org/wikipedia/en/c/c3/Born_This_Way_album_cover.png"
     },
     {   
         "id": 4,
+        "nombre": "Artpop",
+        "artista": "Lady Gaga",
+        "precio": 12500,
+        "img": "https://upload.wikimedia.org/wikipedia/en/3/39/Artpop_cover.png"
+    },
+    {   
+        "id": 5,
+        "nombre": "Joanne",
+        "artista": "Lady Gaga",
+        "precio": 13000,
+        "img": "https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png"
+    },
+    {   
+        "id": 6,
         "nombre": "Chromatica",
-        "precio": 25,
+        "artista": "Lady Gaga",
+        "precio": 17900,
         "img": "https://upload.wikimedia.org/wikipedia/en/d/d6/Lady_Gaga_-_Chromatica_%28Official_Album_Cover%29.png"
+    },
+    {   
+        "id": 7,
+        "nombre": "The Bends",
+        "artista": "Radiohead",
+        "precio": 9990,
+        "img": "https://upload.wikimedia.org/wikipedia/en/5/55/Radioheadthebends.png"
+    },
+    {   
+        "id": 8,
+        "nombre": "Ok Computer",
+        "artista": "Radiohead",
+        "precio": 13990,
+        "img": "https://upload.wikimedia.org/wikipedia/en/b/ba/Radioheadokcomputer.png"
+    },
+    {   
+        "id": 9,
+        "nombre": "Kid A",
+        "artista": "Radiohead",
+        "precio": 12500,
+        "img": "https://upload.wikimedia.org/wikipedia/en/0/02/Radioheadkida.png"
+    },
+    {   
+        "id": 10,
+        "nombre": "Amnesiac",
+        "artista": "Radiohead",
+        "precio": 15000,
+        "img": "https://upload.wikimedia.org/wikipedia/en/8/8c/Radiohead_-_Amnesiac_cover.png"
+    },
+    {   
+        "id": 10,
+        "nombre": "Hail To The Thief",
+        "artista": "Radiohead",
+        "precio": 14300,
+        "img": "https://upload.wikimedia.org/wikipedia/en/6/61/Radioheadhailtothethief.png"
+    },
+    {   
+        "id": 10,
+        "nombre": "The King of Limbs",
+        "artista": "Radiohead",
+        "precio": 16400,
+        "img": "https://upload.wikimedia.org/wikipedia/en/a/a2/Radioheadthekingoflimbs.png"
     }
 ]

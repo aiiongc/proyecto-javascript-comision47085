@@ -18,6 +18,7 @@ const obtenerDiscos = async () => {
         contenido.innerHTML = `
         <img src="${album.img}">
         <h3>${album.nombre}</h3>
+        <p class="artista">${album.artista}<p>
         <p class="precio">$${album.precio}</p>
         `;
 
